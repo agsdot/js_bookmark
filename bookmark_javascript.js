@@ -1,0 +1,1 @@
+<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://foo.bar/baz.js';})();">Externalized Bookmarklet</a>
