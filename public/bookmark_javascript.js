@@ -44,7 +44,7 @@
 // encodeURIComponent(
      // var NWin = window.open('http://localhost:3000/bookmarks/new?title= ' + doctitle + '&?url=' + doclocation + '&?text=' + selectedText, '', 'height=400,width=400');
 
-     var NWin = window.open('http://localhost:3000/bookmarks/new?text= ' + encodeURIComponent(selectedText) + '&amp;%3Ftitle%3D' + encodeURIComponent(doctitle) + '&?url=' + encodeURIComponent(doclocation) , '', 'height=400,width=400');
+     var NWin = window.open('http://localhost:3000/bookmarks/new?text= ' + encodeURIComponent(selectedText) + '&title=' + encodeURIComponent(doctitle) + '&url=' + encodeURIComponent(doclocation) , '', 'height=400,width=400');
 
 
 // %3F into ? and %3D into = RSS
