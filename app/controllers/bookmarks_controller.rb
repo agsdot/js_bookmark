@@ -27,24 +27,11 @@ class BookmarksController < ApplicationController
     # @bookmark = Bookmark.new
     @bookmark = Bookmark.new :url => params[:url], :title => params[:title], :quote => params[:text]
 
-# ?title=
-# ?url=
-# ?text=
-
-
-# :url => params[:url], :title => params[:title], :quote => params[:text]
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @bookmark }
     end
   end
-
-
-
-
-
-
 
   def new_backup
     @bookmark = Bookmark.new

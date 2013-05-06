@@ -1,3 +1,12 @@
+//bookmarklet code
+
+//javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://localhost:3000/bookmark_javascript.js?q=Math.random()';})();
+
+//vital parts of the code:
+
+//1) this public facing js file
+//2) the rails routes in app/bookmarks_controller.rb and the "new" action
+
 (function(){
 
   var v = "1.9.1";
@@ -38,36 +47,16 @@
 
        selectedText = getSelText();
 
-
-     // var encodedParam = encodeURIComponent('www.foobar.com/?first=1&second=12&third=5');
-     // var encodedParam = encodeURIComponent('http://localhost:3000/bookmarks/new?title= ' + doctitle + '&?url=' + doclocation + '&?text=' + selectedText);
-// encodeURIComponent(
-     // var NWin = window.open('http://localhost:3000/bookmarks/new?title= ' + doctitle + '&?url=' + doclocation + '&?text=' + selectedText, '', 'height=400,width=400');
-
      var NWin = window.open('http://localhost:3000/bookmarks/new?text= ' + encodeURIComponent(selectedText) + '&title=' + encodeURIComponent(doctitle) + '&url=' + encodeURIComponent(doclocation) , '', 'height=400,width=400');
 
 
-// %3F into ? and %3D into = RSS
-// %3F ?
-// &amp; &
-// %3D =
-// &?title=
-// &amp;%3Ftitle%3D
 
      if (window.focus)
      {
        NWin.focus();
 
-       // $('#bookmark_url').val('hello');
      }
      return false;
-
-
-      // alert('Youve got jQuery '+ document.title + ' ' + v + ' ' + selectedText +' loaded. Arbitrary JS code Hello Worldia! ');
-
-
-
-      //  alert('Youve got jQuery '+ document.title + ' ' + v + ' ' + selectedText +' loaded. Arbitrary JS code Hello Worldia! ');
 
     })();
   }
